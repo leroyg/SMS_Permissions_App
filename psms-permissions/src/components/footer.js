@@ -13,7 +13,7 @@ import {Link} from 'react-router-dom'
 const Footer = () => {
     return (
         
-<AppBar position="static"   style={{padding: '15px 0', color:'black',background:'#30027e',width:'50%',boxShadow:'none'}}>
+<AppBar position="static"   style={{padding: '15px 0', color:'white',background:'#200835',width:'50%',boxShadow:'none'}}>
         <Toolbar>
      
           <Typography variant="h6" style={{flexGrow: 1,display:'flex',justifyContent:'center',flexDirection:'column'}}>

@@ -12,9 +12,9 @@ export default function ButtonAppBar() {
 
   return (
     <div style={{flexGrow: 1 ,
-      fontSize: '2rem',background:'#30027e', display:"flex" ,flexDirection:'column',justifyContent:'center' ,alignItems:'center'}}>
+      fontSize: '2rem',background:'#200835', display:"flex" ,flexDirection:'column',justifyContent:'center' ,alignItems:'center'}}>
      <Header/>
-      <div style={{background:'white' ,width:'50%'}}>
+      <div style={{background:'#FFFFFF' ,width:'50%'}}>
 <Route exact path='/'   component={Home}/>
 
 

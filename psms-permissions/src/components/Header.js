@@ -13,7 +13,7 @@ import {NavLink} from 'react-router-dom'
 
 const Header = () => {
     return (
-        <AppBar position="static"   style={{padding: '15px 0', color:'black',background:'white',width:'50%'}}>
+        <AppBar position="static"   style={{padding: '15px 0', color:'#4A4A4A',background:'white',width:'50%'}}>
         <Toolbar>
           <IconButton edge="start" style={{ marginRight:'2%'}} color="inherit" aria-label="Menu">
             <MenuIcon />
