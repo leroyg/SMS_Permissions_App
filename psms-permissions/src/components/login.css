@@ -1,0 +1,65 @@
+h1 {
+    font-size: 1.6rem;
+}
+
+label{
+    font-size: .7rem
+}
+
+.description p {
+    font-size: .7rem;
+    margin: 10%;
+}
+
+.signup {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input{
+    display: block;
+    background: none;
+    padding: 0.175rem 0.175rem 0.0875rem;
+    font-size: .8rem;
+    border-width: 0;
+    border-color: transparent;
+    line-height: 1.9;
+    width: 100%;
+    color: #ccc;
+    transition: all 0.28s ease;
+    box-shadow: none;
+    border-bottom: 1px solid #979797;
+}
+.submit {
+    display:flex;
+    flex-direction: row;
+    font-size: .6rem;
+}
+.submit p {
+    font-size: .5rem;
+    width: 65%;
+    margin: 0;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.submit button{
+    background-color: #943FBD;
+    border: none;
+    border-radius: 10px;
+    width: 50%;
+    font-size: .5rem;
+    margin-top: 5%;
+}
+
+.description{
+    font-size: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30%;
+}
