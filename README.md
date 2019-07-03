@@ -9,4 +9,8 @@ HTML/CSS
 ReactJS
 JavaScript
 Twilio API
+KnexJS
+Node 
+Express
+PostgreSQL
 
