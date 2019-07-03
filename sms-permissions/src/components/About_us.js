@@ -8,7 +8,6 @@ import ryan from "./images/aboutus/ryan.jpg";
 import vicky from "./images/aboutus/vicky.jpg";
 import "./aboutus.css";
 
-
 const About_us = () => {
     return (
         <div className="about">

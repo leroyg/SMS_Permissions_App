@@ -1,13 +1,13 @@
 import React from 'react';
 import "./login.css"
-import picture from "./images/signuppage/teacher.jpg";
+import teacher from "./images/signuppage/teacher.jpg";
 
 const Register = () => {
     return (
         <div className="register">
             <div className="description">
                 <p>Contact Parents or Guardians with a quick secure response for permission slips.</p>
-                <img src={picture} alt="teacher" />
+                <img src={teacher} alt="teacher" />
             </div>
 
             <div className="signup">
