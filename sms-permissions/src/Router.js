@@ -28,7 +28,6 @@ class Router extends Component {
         }}
       >
         <Route path="/" component={Header} />
-        <Route path="/admin" component={AdminHome} />
         <div style={{ background: "#FFFFFF", width: "95%" }}>
           <Route exact path="/" component={Home} />
           <Route exact path="/trip/:id" component={StudentTripView} />
@@ -36,7 +35,7 @@ class Router extends Component {
           <Route exact path="/about_Us" component={About_us} />
           <Route exact path="/register" component={Register} />
           <Route exact path="/login" component={Login} />
-          <Route exact path="/add_student" component={AddStudentsToClass} />
+          <Route exact path="/admin" component={AdminHome} />
         </div>
         <Route exact path="/field-trip" component={AddFieldTrip} />
 
