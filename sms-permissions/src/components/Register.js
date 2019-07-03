@@ -10,9 +10,9 @@ const Register = () => {
                 <img src={picture} alt="teacher" style={{ width: "90%", height: "150px" }} />
             </div>
 
-            <div style={{ background: "#200835", width: '50%', flexDirection: 'column', paddingBottom: "55%", paddingTop: "35%" }} className="signup">
+            <div style={{ background: "#34004B", width: '50%', flexDirection: 'column', paddingBottom: "55%", paddingTop: "35%" }} className="signup">
                 <h1>Register</h1>
-                <form style={{ background: "#200835", width: '50%', flexDirection: 'column' }} className="signin">
+                <form style={{ background: "#34004B", width: '50%', flexDirection: 'column' }} className="signin">
                     <label className="label">FULL NAME</label>
                     <input className="input" type="text" name="name" placeholder="First and last name" />
                     <label className="label">EMAIL</label>
