@@ -11,6 +11,7 @@ import AdminHome from "./components/AdminPages/AdminHome";
 import AddFieldTrip from "./components/AdminForms/AddFieldTrip";
 import StudentTripView from "./components/studentTripView"
 import TeacherTripView from "./components/TeacherTripView"
+import AddStudentsToClass from "./components/AdminForms/AddStudentsToClass";
 
 class Router extends Component {
   render() {
@@ -28,13 +29,14 @@ class Router extends Component {
       >
         <Route path="/" component={Header} />
         <Route path="/admin" component={AdminHome} />
-        <div style={{ background: "#FFFFFF", width: "50%" }}>
+        <div style={{ background: "#FFFFFF", width: "100%" }}>
           <Route exact path="/" component={Home} />
           <Route exact path="/trip/:id" component={StudentTripView} />
           <Route exact path="/teacher/trip" component={TeacherTripView} />
           <Route exact path="/about_Us" component={About_us} />
           <Route exact path="/register" component={Register} />
           <Route exact path="/login" component={Login} />
+          <Route exact path="/add_student" component={AddStudentsToClass} />
         </div>
         <Route exact path="/field-trip" component={AddFieldTrip} />
 

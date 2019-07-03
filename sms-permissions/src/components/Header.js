@@ -44,6 +44,10 @@ const Header = () => {
           <Button color="inherit">View Field Trips</Button>
 </NavLink>
 
+<NavLink to='/add-student' style={{color:'inherit' , textDecoration:'none'}}>
+          <Button color="inherit">Add Student</Button>
+</NavLink>
+
         </Toolbar>
       </AppBar>
     );
