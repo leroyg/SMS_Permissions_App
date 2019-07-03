@@ -1,27 +1,20 @@
 .container {
+    background-color: @main;
+    margin: auto;
+    width: 1024px;
 
     .nav {
-
+        background-color: white;
         height: 9.8rem;
         display: flex;
         align-items: center;
         
         .nav-container {
             height: 3.5rem;
-            width: 1024px;
-            margin-top: 2rem;
+            width: 100%;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-    
-            a {
-                text-decoration: none;
-                font-size: 2.7rem;
-
-                &:hover {
-                    color: #4A4A4A;
-                }
-            }
     
             .logo-nav {
                 color: @logo;
@@ -29,6 +22,16 @@
                 width: 14.8rem;
                 margin-left: 2.3rem;
                 line-height: 3.2rem;
+
+                a {
+                    text-decoration: none;
+                    font-size: 2.7rem;
+                    color: #242425;
+    
+                    &:hover {
+                        color: #4A4A4A;
+                    }
+                }
             }
     
             .nav-bar {
@@ -55,9 +58,7 @@
     }
 
     .landing {
-
         .header-display {
-
             background: url('../assets/landing/landing-bg.png') no-repeat center;
             -webkit-background-size: cover;
             -moz-background-size: cover;
@@ -101,7 +102,7 @@
         display: flex;
         flex-direction: row;
         margin-top: -6.5rem;
-        margin-left: 3rem;
+        padding-left: 3rem;
 
         .schedule {
             height: 314px;
@@ -119,7 +120,6 @@
                     margin-left: -4.5rem;
                     margin-bottom: 1.5rem;
                 }
-
             }
 
             h2 {
@@ -204,10 +204,14 @@
     }
 
     .stay-container {
-
+        background-color: white;
         display: flex;
         flex-direction: row;
-        margin-left: 3rem;
+        padding-left: 3rem;
+        padding-bottom: 6rem;
+
+        margin-top: -25rem;
+        padding-top: 26rem;
 
         .organized {
             margin-right: 3rem;
@@ -285,37 +289,102 @@
     }
 
     .contact-section {
-        margin-top: 6rem;
+        background: url('../assets/landing/contact.jpg') no-repeat center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: 100%;;
+        height: 300px;
+        opacity: 0.8;
+    
+        .contact-info {
+            height: 30rem;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-direction: column;
 
-        img {
-            height: auto 100%;
-            width: 1027px;
-            background-color: #550F92;
+            .cont-box {
+                margin-top: 6.5rem;
+                
+                .contact-us {
+                    border-radius: 3.4rem;
+                    border: 2px solid white;
+                    color: white;
+                    font-size: 2.7rem;
+                    line-height: 3.2rem;
+                    margin: 0 356px;
+                    margin-top: 5rem;
+                    padding: 1rem;
+
+                    &:hover {
+                        background-color: #33014B;
+                        transition: background-color 0.8s ease;
+                    }
+                }
+    
+                h2 {
+                    display: flex;
+                    justify-content: center;
+                    align-content: center;
+                    font-size: 3.9rem;
+                    font-weight: 700;
+                    color: white;
+                    margin-left: 2.1rem;
+                }
+            }
         }
     }
 
-
     .footer {
         background-color: @main;
+        height: 237px;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
 
         .logo-nav {
             text-decoration: none;
             color: white;
-        }
-
-        .footer-nav {
+            font-size: 3.2rem;
+            
             a {
-                text-decoration: none;
-                color: white;
+                font-weight: 700;
             }
         }
 
-        .terms {
-            a {
-                text-decoration: none;
-                color: white;
+        .footer-wrap {
+            display: inline-flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .footer-nav {
+                display: flex;
+                flex-direction: column;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                    font-size: 1.6rem;
+                    line-height: 19px;
+                }
+            }
+
+            .terms {
+                display: flex;
+                flex-direction: column;
+                margin-top: 0.3rem;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                    font-size: 1.6rem;
+                }
             }
         }
+
     }
 
 
