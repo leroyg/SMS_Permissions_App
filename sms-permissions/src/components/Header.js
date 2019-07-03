@@ -35,13 +35,13 @@ const Header = () => {
           <Button color="inherit">About Us</Button>
 </NavLink>
 
-<NavLink to='/register' style={{color:'inherit' , textDecoration:'none'}}>
-          <Button color="inherit">Register</Button>
+<NavLink to='/field-trip' style={{color:'inherit' , textDecoration:'none'}}>
+          <Button color="inherit">Add Field Trip</Button>
 </NavLink>
 
 
-<NavLink to='/login' style={{color:'inherit' , textDecoration:'none'}}>
-          <Button color="inherit">Login</Button>
+<NavLink to='/teacher/trips' style={{color:'inherit' , textDecoration:'none'}}>
+          <Button color="inherit">View Field Trips</Button>
 </NavLink>
 
         </Toolbar>

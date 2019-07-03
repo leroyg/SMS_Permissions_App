@@ -51,7 +51,6 @@ const AddFieldTrip = () => {
       .catch(err => console.log(err.message));
   };
 
-  console.log(trip);
   return (
     <div className={classes.container}>
       <form className={classes.form} onSubmit={submitHandler}>
