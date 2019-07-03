@@ -13,11 +13,11 @@ const Register = () => {
             <div style={{ background: "#200835", width: '50%', flexDirection: 'column', paddingBottom: "55%", paddingTop: "35%" }} className="signup">
                 <h1>Register</h1>
                 <form style={{ background: "#200835", width: '50%', flexDirection: 'column' }} className="signin">
-                    <label>FULL NAME</label>
+                    <label className="label">FULL NAME</label>
                     <input className="input" type="text" name="name" placeholder="First and last name" />
-                    <label>EMAIL</label>
+                    <label className="label">EMAIL</label>
                     <input className="input" type="email" name="email" placeholder="Email address" />
-                    <label>PASSWORD</label>
+                    <label className="label">PASSWORD</label>
                     <input className="input" type="password" placeholder="***********" name="password" />
                     <div style={{ fontSize: ".6rem" }} className="submit">
                         <p>I'm already a member</p>
