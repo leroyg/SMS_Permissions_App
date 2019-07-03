@@ -1,7 +1,7 @@
 $(window).resize(function(){
-    if($(window).width() <= 760){
+    if($(window).width() <= 1023){
         $('.hamburger').removeClass('hide');
-    } else if($(window).width() >= 780) {
+    } else if($(window).width() >= 1020) {
         $('.hamburger').addClass('hide');
     }
 });

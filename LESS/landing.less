@@ -4,7 +4,7 @@
     width: 1024px;
 
     @media @mobile {
-        width: 485px;
+        width: 95%;
         overflow: hidden;
     }
 
@@ -119,13 +119,11 @@
             background-size: cover;
             height: 481px;
             width: 100%;
-            max-width: 1024px;
 
             @media @mobile {
                 background-size: cover;
                 height: 350px;
                 width: 100%;
-                max-width: 767px;
                 background-color: rgba(0, 0, 0, 0.5);
             }
 
@@ -134,13 +132,18 @@
                 flex-direction: column;
                 justify-content: flex-end;
                 align-items: flex-end;
-                margin-right: 3.5rem;
-                padding-top: 8.5rem;
+                margin-right: 2%;
+                // height: 100%;
+                padding-top: 10%;
 
                 @media @mobile {
+                    display: flex;
+                    justify-content: center;
                     align-items: center;
                     flex-direction: column-reverse;
                     margin-right: 0;
+                    padding-top: 0%;
+                    height: 100%;
                 }
 
                 h2 {
@@ -183,7 +186,7 @@
     .features-container {
         display: flex;
         flex-direction: row;
-        margin-top: -6.5rem;
+        margin-top: -9%;
         padding-left: 3rem;
 
         @media @mobile {
