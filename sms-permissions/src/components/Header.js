@@ -40,7 +40,7 @@ const Header = () => {
 </NavLink>
 
 
-<NavLink to='/teacher/trips' style={{color:'inherit' , textDecoration:'none'}}>
+<NavLink to='/teacher/trip' style={{color:'inherit' , textDecoration:'none'}}>
           <Button color="inherit">View Field Trips</Button>
 </NavLink>
 
