@@ -8,24 +8,30 @@ class AdminHome extends Component {
 
         this.state={students:[]}
     }
-    
 
-    componentDidMount() {
-        axios
-          .get("https://sms-permission-backend.herokuapp.com/students")
-          .then(res => this.setState(   { students: res.data.students }  ))
-          .catch(err => console.log(err));
+
+     getStudents   =   ()  =>  {
+          axios
+            .get("https://sms-permission-backend.herokuapp.com/students")
+            .then(res => this.setState(   { students: res.data.students }  ))
+            .catch(err => console.log(err));
       }
-    
+
+      componentDidMount() {
+          this.getStudents();
+        }
+
       addStudent = student => {
-     
+
         axios
           .post("https://sms-permission-backend.herokuapp.com/students", student)
-          .then(res => this.setState({ students:res.data.students }))
+          .then(res => {
+             this.getStudents();
+          })
           .catch(err => console.log(err));
         this.props.history.push("/admin");
       };
-    
+
 
 
     render() {
@@ -34,8 +40,8 @@ class AdminHome extends Component {
              //  <StudentsList students={this.state.students}  />
                <AddStudents addStudent={this.addStudent}/>
             </div>
-        ); 
+        );
     }
-} 
+}
 
 export default AdminHome;

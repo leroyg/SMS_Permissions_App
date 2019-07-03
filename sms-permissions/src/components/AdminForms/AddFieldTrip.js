@@ -46,10 +46,9 @@ const AddFieldTrip = () => {
     console.log(tripObj);
     e.preventDefault();
     axios
-      .post("https://sms-permission-backend.herokuapp.com/fieldTrips", tripObj)
+      .post("https://sms-permission-backend.herokuapp.com/fieldTrips", tripObj, {headers: {"Access-Control-Allow-Origin" : "*"}})
       .then(res => console.log(res.data))
       .catch(err => console.log(err.message));
-    setTrip({});
   };
 
   console.log(trip);

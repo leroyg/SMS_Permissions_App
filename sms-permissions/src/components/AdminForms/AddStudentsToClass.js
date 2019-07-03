@@ -2,36 +2,30 @@ import React, { Component } from "react";
 
 class AddStudentsToClass extends Component {
   state = {
-        
-    student: {
-    name: '',
-    teacher_id:''
-    },
-    guardian: {
-    name: "",
-    contact: ""
-    }
-    
+      studentName: "",
+      guardianName: "",
+      contact: ""
   }
-
-
-axios
 
   addStudent = event => {
     event.preventDefault();
     // add code to create
-    this.props.addStudent(this.state);
-    this.setState({
-        
-    student: {
-    name: '',
-    teacher_id:''
-    },
-    guardian: {
-    name: " ",
-    contact: " "
+    const req = {
+        student:    {
+            name: this.state.studentName,
+            teacher_id: 1
+        },
+        guardian:   {
+            name: this.state.guardianName,
+            contact: this.state.contact.split(/\D/g).join("")
+        }
     }
-    
+    console.log(req)
+    this.props.addStudent(req);
+    this.setState({
+        studentName: "",
+        guardianName: "",
+        contact: ""
   });
   };
 
@@ -40,36 +34,29 @@ axios
   };
 
   render() {
-      console.log(this.state.student.name)
+      console.log(this.state)
     return (
       <div>
         <form onSubmit={this.addStudent}>
           <input
             onChange={this.handleInputChange}
             type="text"
-            name='name'
+            name='studentName'
             placeholder="Student Name"
-            value={this.state.student.name}
-          />
-          <input
-            onChange={this.handleInputChange}
-            type="text"
-            name='StudentTeacher'
-            placeholder="Parent Name"
-            value={this.state.student.teacher_id}
+            value={this.state.studentName}
           />
           <input
             onChange={this.handleInputChange}
             type="text"
             name='guardianName'
-            placeholder="name"
-            value={this.state.guardian.name}
+            placeholder="Guardian Name"
+            value={this.state.guardianName}
           />
 
 <input
             onChange={this.handleInputChange}
             type="tel"
-            value={this.state.guardian.contact}
+            value={this.state.contact}
             name='contact'
             placeholder="555-555-5555"
           />
