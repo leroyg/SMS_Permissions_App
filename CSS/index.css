@@ -126,25 +126,23 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+.container {
+  background-color: #200835;
+  margin: auto;
+  width: 1024px;
+}
 .container .nav {
+  background-color: white;
   height: 9.8rem;
   display: flex;
   align-items: center;
 }
 .container .nav .nav-container {
   height: 3.5rem;
-  width: 1024px;
-  margin-top: 2rem;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
-.container .nav .nav-container a {
-  text-decoration: none;
-  font-size: 2.7rem;
-}
-.container .nav .nav-container a:hover {
-  color: #4A4A4A;
 }
 .container .nav .nav-container .logo-nav {
   color: #242425;
@@ -152,6 +150,14 @@ table {
   width: 14.8rem;
   margin-left: 2.3rem;
   line-height: 3.2rem;
+}
+.container .nav .nav-container .logo-nav a {
+  text-decoration: none;
+  font-size: 2.7rem;
+  color: #242425;
+}
+.container .nav .nav-container .logo-nav a:hover {
+  color: #4A4A4A;
 }
 .container .nav .nav-container .nav-bar {
   padding-top: 7px;
@@ -208,7 +214,7 @@ table {
   display: flex;
   flex-direction: row;
   margin-top: -6.5rem;
-  margin-left: 3rem;
+  padding-left: 3rem;
 }
 .container .features-container .schedule {
   height: 314px;
@@ -294,9 +300,13 @@ table {
   padding: 2rem 2rem 2rem 0rem;
 }
 .container .stay-container {
+  background-color: white;
   display: flex;
   flex-direction: row;
-  margin-left: 3rem;
+  padding-left: 3rem;
+  padding-bottom: 6rem;
+  margin-top: -25rem;
+  padding-top: 26rem;
 }
 .container .stay-container .organized {
   margin-right: 3rem;
@@ -363,27 +373,88 @@ table {
   margin-top: 1rem;
 }
 .container .contact-section {
-  margin-top: 6rem;
+  background: url('../assets/landing/contact.jpg') no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: 100%;
+  height: 300px;
+  opacity: 0.8;
 }
-.container .contact-section img {
-  height: auto 100%;
-  width: 1027px;
-  background-color: #550F92;
+.container .contact-section .contact-info {
+  height: 30rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+.container .contact-section .contact-info .cont-box {
+  margin-top: 6.5rem;
+}
+.container .contact-section .contact-info .cont-box .contact-us {
+  border-radius: 3.4rem;
+  border: 2px solid white;
+  color: white;
+  font-size: 2.7rem;
+  line-height: 3.2rem;
+  margin: 0 356px;
+  margin-top: 5rem;
+  padding: 1rem;
+}
+.container .contact-section .contact-info .cont-box .contact-us:hover {
+  background-color: #33014B;
+  transition: background-color 0.8s ease;
+}
+.container .contact-section .contact-info .cont-box h2 {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: 3.9rem;
+  font-weight: 700;
+  color: white;
+  margin-left: 2.1rem;
 }
 .container .footer {
   background-color: #200835;
+  height: 237px;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 .container .footer .logo-nav {
   text-decoration: none;
   color: white;
+  font-size: 3.2rem;
 }
-.container .footer .footer-nav a {
+.container .footer .logo-nav a {
+  font-weight: 700;
+}
+.container .footer .footer-wrap {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.container .footer .footer-wrap .footer-nav {
+  display: flex;
+  flex-direction: column;
+}
+.container .footer .footer-wrap .footer-nav a {
   text-decoration: none;
   color: white;
+  font-size: 1.6rem;
+  line-height: 19px;
 }
-.container .footer .terms a {
+.container .footer .footer-wrap .terms {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.3rem;
+}
+.container .footer .footer-wrap .terms a {
   text-decoration: none;
   color: white;
+  font-size: 1.6rem;
 }
 html {
   box-sizing: border-box;
@@ -400,4 +471,5 @@ body {
   padding: 0;
   font-size: 62.5%;
   font-family: 'Fira Sans Condensed', sans-serif;
+  background-color: #200835;
 }
