@@ -1,21 +1,92 @@
-import React, { Component } from 'react';
+import React, { Component, useState, useEffect } from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
+import axios from "axios";
 
-class AddFieldTrip extends Component {
-    render() {
-        return (
-            <div>
-                <form>
-                    <input type="text" name="tripName" placeholder="Trip Name" />
-                    <input type="text" name="location" placeholder="Add Address" />
-                    <input type="datetime" name="date" placeholder="Event Date" />
-                    <input type="datetime-local" name="startTime" placeholder="Start Time"/>
-                    <input type="datetime-local" name="endTime" placeholder="End Time"/>
-                    <textarea type="text" name="tripInfo" placeholder="Add Trip Details"/>
-                    <button>+Add Trip</button>
-                </form>
-            </div>
-        );
-    }
-}
+const useStyles = makeStyles(theme => ({
+  container: {
+    display: "flex",
+    flexWrap: "wrap",
+    flexDirection: "column",
+    backgroundColor: "white",
+    width: "50%"
+  },
+  form: {
+    display: "flex",
+    flexDirection: "column"
+  },
+  textField: {
+    margin: "15px auto",
+    width: "70%"
+  },
+  dense: {
+    marginTop: theme.spacing(2)
+  },
+  menu: {
+    width: 200
+  },
+  button: {
+    margin: theme.spacing(1)
+  }
+}));
+
+const AddFieldTrip = () => {
+  const classes = useStyles();
+  const [trip, setTrip] = useState({});
+
+  const changeHandler = e => {
+    setTrip({ ...trip, [e.target.name]: e.target.value });
+  };
+
+  const submitHandler = e => {
+    const tripObj = {
+      fieldTrip: { date: trip.date, name: trip.tripName, teacher_id: 1 }
+    };
+    console.log(tripObj);
+    e.preventDefault();
+    axios
+      .post("https://sms-permission-backend.herokuapp.com/fieldTrips", tripObj)
+      .then(res => console.log(res.data))
+      .catch(err => console.log(err.message));
+    setTrip({});
+  };
+
+  console.log(trip);
+  return (
+    <div className={classes.container}>
+      <form className={classes.form} onSubmit={submitHandler}>
+        <TextField
+          variant="outlined"
+          className={classes.textField}
+          onChange={changeHandler}
+          value={trip.tripName}
+          type="text"
+          name="tripName"
+          placeholder="Trip Name"
+        />
+
+        <TextField
+          variant="outlined"
+          className={classes.textField}
+          onChange={changeHandler}
+          value={trip.date}
+          type="date"
+          name="date"
+          placeholder="Event Date"
+        />
+
+        <Button
+          type="submit"
+          variant="outlined"
+          color="primary"
+          className={classes.button}
+        >
+          + Add Trip
+        </Button>
+      </form>
+    </div>
+  );
+};
 
 export default AddFieldTrip;
