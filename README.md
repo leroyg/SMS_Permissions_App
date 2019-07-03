@@ -9,5 +9,7 @@ HTML/CSS
 ReactJS
 JavaScript
 Twilio API
+Node 
+Express
 PostgreSQL
 
