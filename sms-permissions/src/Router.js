@@ -29,7 +29,7 @@ class Router extends Component {
       >
         <Route path="/" component={Header} />
         <Route path="/admin" component={AdminHome} />
-        <div style={{ background: "#FFFFFF", width: "100%" }}>
+        <div style={{ background: "#FFFFFF", width: "95%" }}>
           <Route exact path="/" component={Home} />
           <Route exact path="/trip/:id" component={StudentTripView} />
           <Route exact path="/teacher/trip" component={TeacherTripView} />
